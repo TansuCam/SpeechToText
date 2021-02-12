@@ -1,10 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
+import Uploads from '../components/Upload'
 
 const Upload = () => {
     return <div>
-      <h1>Upload</h1>
-
+      <Uploads/>
     </div>
   }
   
