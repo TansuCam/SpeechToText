@@ -1,6 +1,6 @@
 
 
-const Upload = () =>{
+const Result = () =>{
     return(
         <div class="container">
         <div class="row" style={{marginTop: 100}}>
@@ -17,4 +17,4 @@ const Upload = () =>{
             </div></div></div>
 
     )}
-export default Upload
+export default Result
