@@ -5,60 +5,60 @@ const Login = () =>{
         <div className="pt-2 pl-2 pr-2">
         <form>
   
-            <div class="form-outline mb-4">
-                <input type="email" id="form2Example1" class="form-control" />
-                <label class="form-label" for="form2Example1">Email address</label>
+            <div className="form-outline mb-4">
+                <input type="email" id="form2Example1" className="form-control" />
+                <label className="form-label" for="form2Example1">Email address</label>
             </div>
 
 
-            <div class="form-outline mb-4">
-                <input type="password" id="form2Example2" class="form-control" />
-                <label class="form-label" for="form2Example2">Password</label>
+            <div className="form-outline mb-4">
+                <input type="password" id="form2Example2" className="form-control" />
+                <label className="form-label" for="form2Example2">Password</label>
             </div>
 
 
-            <div class="row mb-4">
-                <div class="col d-flex justify-content-center">
+            <div className="row mb-4">
+                <div className="col d-flex justify-content-center">
                 
-                <div class="form-check">
+                <div className="form-check">
                     <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     value=""
                     id="form2Example3"
                     checked
                     />
-                    <label class="form-check-label" for="form2Example3"> Remember me </label>
+                    <label className="form-check-label" for="form2Example3"> Remember me </label>
                 </div>
                 </div>
 
-                <div class="col">
+                <div className="col">
                 
                 <a href="#!">Forgot password?</a>
                 </div>
             </div>
 
             
-            <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+            <button type="submit" className="btn btn-primary btn-block mb-4">Sign in</button>
 
             
-            <div class="text-center">
+            <div className="text-center">
                 <p>Not a member? <a href="#!">Register</a></p>
                 <p>or sign up with:</p>
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                <i class="fab fa-facebook-f"></i>
+                <button type="button" className="btn btn-primary btn-floating mx-1">
+                <i className="fab fa-facebook-f"></i>
                 </button>
 
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                <i class="fab fa-google"></i>
+                <button type="button" className="btn btn-primary btn-floating mx-1">
+                <i className="fab fa-google"></i>
                 </button>
 
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                <i class="fab fa-twitter"></i>
+                <button type="button" className="btn btn-primary btn-floating mx-1">
+                <i className="fab fa-twitter"></i>
                 </button>
 
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                <i class="fab fa-github"></i>
+                <button type="button" className="btn btn-primary btn-floating mx-1">
+                <i className="fab fa-github"></i>
                 </button>
             </div>
             </form>
