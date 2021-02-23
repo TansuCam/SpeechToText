@@ -1,5 +1,4 @@
   //bhtspeech@gmail.com bht123456
-  //RpRdgc8EfRX5Y7bY
   import mongoose from 'mongoose'
 
   function initDB(){

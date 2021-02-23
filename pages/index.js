@@ -9,18 +9,18 @@ const HomePage = () => {
       <div className="index mt-5">
           <div className="container pt-5 border shadow">
           
-              <ul class="nav nav-pills mb-3" style={{marginLeft: '30%'}} id="pills-tab" role="tablist">
-                <li class="nav-item ">
-                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">GIRIS YAP</a>
+              <ul className="nav nav-pills mb-3" style={{marginLeft: '30%'}} id="pills-tab" role="tablist">
+                <li className="nav-item ">
+                  <a className="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">GIRIS YAP</a>
                 </li>
-                <li class="nav-item ">
-                  <a class="nav-link float-lg-end" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">KAYDOL</a>
+                <li className="nav-item ">
+                  <a className="nav-link float-lg-end" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">KAYDOL</a>
                 </li>
             </ul>
         
-            <div class="tab-content pl-5 pr-5" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"><Login/></div>
-              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"><Register/></div>
+            <div className="tab-content pl-5 pr-5" id="pills-tabContent">
+              <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"><Login/></div>
+              <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"><Register/></div>
             </div>
 
             <Link href="/upload"><button className="mt-5">Yükleme Sayfasına Git</button></Link>
