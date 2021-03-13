@@ -5,9 +5,12 @@ body{
     margin-left: 70px;
     margin-bottom: 10%;
     display: grid;
-    grid-template-columns: 45% 30%;
-    grid-gap:10%;
+    grid-template-columns: 35% 40%;
+    grid-gap:5%;
     
+}
+.img{
+    margin-top: 0px;
 }
 .indexcard{
     margin-top: -50px;

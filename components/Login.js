@@ -1,7 +1,7 @@
 
 const Login = () =>{
     return(
-        <div className="Login">
+        <div>
         <div className="pt-2 pl-2 pr-2">
         <form>
   
@@ -41,26 +41,6 @@ const Login = () =>{
             
             <button type="submit" className="btn btn-primary btn-block mb-4">Sign in</button>
 
-            
-            <div className="text-center">
-                <p>Not a member? <a href="#!">Register</a></p>
-                <p>or sign up with:</p>
-                <button type="button" className="btn btn-primary btn-floating mx-1">
-                <i className="fab fa-facebook-f"></i>
-                </button>
-
-                <button type="button" className="btn btn-primary btn-floating mx-1">
-                <i className="fab fa-google"></i>
-                </button>
-
-                <button type="button" className="btn btn-primary btn-floating mx-1">
-                <i className="fab fa-twitter"></i>
-                </button>
-
-                <button type="button" className="btn btn-primary btn-floating mx-1">
-                <i className="fab fa-github"></i>
-                </button>
-            </div>
             </form>
         </div>
         </div>

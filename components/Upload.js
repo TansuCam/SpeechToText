@@ -2,11 +2,9 @@ import Link from 'next/link'
 
 const Upload = () =>{
     return(
-    <div>
-    <div className="container">
-            <div className="row" style={{marginTop: 100}}>
-                <div className="col-lg-1"></div>
-                <div className="col-lg-6">
+
+               
+                <div>
                     <ul className="nav nav-tabs" id="myTab" role="tablist">
                         <li className="nav-item">
                           <a className="nav-link active" id="link-tab" data-toggle="tab" href="#link" role="tab" aria-controls="link"
@@ -54,8 +52,7 @@ const Upload = () =>{
                         </div>
                       </div>
                 </div>
-                </div>
-                </div> </div>
+             
 
     )}
 export default Upload

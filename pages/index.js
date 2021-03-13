@@ -7,7 +7,7 @@ import Image from 'next/image'
 const HomePage = () => {
     return(
       <div className="index mt-5">
-          <div className="container pt-5 border shadow">
+          <div className="container pt-5  ">
           
               <ul className="nav nav-pills mb-3" style={{marginLeft: '30%'}} id="pills-tab" role="tablist">
                 <li className="nav-item ">
@@ -23,26 +23,17 @@ const HomePage = () => {
               <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"><Register/></div>
             </div>
 
-            <Link href="/upload"><button className="mt-5">Yükleme Sayfasına Git</button></Link>
+             <Link href="/upload"><button className="mt-5 bg-white">Yükleme Sayfasına Git</button></Link>  
 
           </div>
-          <div className="mt-5 img">
+          <div className="img">
             <Image
-            src="/speech.png"
+            src="/indexpage.png"
             alt="Picture of the author"
-            width={150}
-            height={150}
+            width={500}
+            height={500}
             ></Image>
-            <div className="card indexcard">
-              <div className="p-5">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li> 
-                <li> Praesent egestas nibh at dui egestas, tincidunt tempor ante aliquet. </li>
-                <li>Quisque commodo scelerisque mi, eget lobortis nunc ornare aliquet.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li> 
-                <li> Praesent egestas nibh at dui egestas, tincidunt tempor ante aliquet. </li>
-                <li>Quisque commodo scelerisque mi, eget lobortis nunc ornare aliquet.</li>
-                </div>
-            </div>
+           
           </div>
     </div>
     )

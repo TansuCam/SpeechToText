@@ -2,7 +2,7 @@ import {useState} from 'react'
 import baseUrl from '../helpers/baseUrl' 
 import { useRouter } from 'next/router'
 
-const Login = () =>{
+const Register = () =>{
     const [name,setName] = useState("")
     const [surname,setSurname] = useState("")
     const [email,setEmail] = useState("")
@@ -75,27 +75,9 @@ const Login = () =>{
 
             <button type="submit" className="btn btn-primary btn-block mb-4">Sign up</button>
 
-            <div className="text-center">
-                <p>or sign up with:</p>
-                <button type="button" className="btn btn-primary btn-floating mx-1">
-                <i className="fab fa-facebook-f"></i>
-                </button>
-
-                <button type="button" className="btn btn-primary btn-floating mx-1">
-                <i className="fab fa-google"></i>
-                </button>
-
-                <button type="button" className="btn btn-primary btn-floating mx-1">
-                <i className="fab fa-twitter"></i>
-                </button>
-
-                <button type="button" className="btn btn-primary btn-floating mx-1">
-                <i className="fab fa-github"></i>
-                </button>
-            </div>
             </form>
         </div>
         </div>
 
     )}
-export default Login
+export default Register
