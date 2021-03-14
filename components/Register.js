@@ -39,41 +39,41 @@ const Register = () =>{
             <div className="row mb-4">
                 <div className="col">
                 <div className="form-outline">
+                    <label className="form-label" for="form3Example1">Ad</label>
                     <input type="text" id="form3Example1" className="form-control" 
                     value={name} 
                     onChange={(e)=>setName(e.target.value)}/>
-                    <label className="form-label" for="form3Example1">First name</label>
                 </div>
                 </div>
                 <div className="col">
                 <div className="form-outline">
+                    <label className="form-label" for="form3Example2">Soyad</label>
                     <input type="text" id="form3Example2" className="form-control"
                     value={surname} 
                     onChange={(e)=>setSurname(e.target.value)} />
-                    <label className="form-label" for="form3Example2">Last name</label>
                 </div>
                 </div>
             </div>
 
             
             <div className="form-outline mb-4">
+                <label className="form-label" for="form3Example3">E-posta Adresi</label>
                 <input type="email" id="form3Example3" className="form-control" 
                 value={email} 
                 onChange={(e)=>setEmail(e.target.value)}/>
-                <label className="form-label" for="form3Example3">Email address</label>
             </div>
 
             
             <div className="form-outline mb-4">
+                <label className="form-label" for="form3Example4">Parola</label>
                 <input type="password" id="form3Example4" className="form-control" 
                 value={password} 
                 onChange={(e)=>setPassword(e.target.value)}/>
-                <label className="form-label" for="form3Example4">Password</label>
             </div>
 
            
 
-            <button type="submit" className="btn btn-primary btn-block mb-4">Sign up</button>
+            <button type="submit" className="btn btn-primary btn-block mb-4">Kaydol</button>
 
             </form>
         </div>

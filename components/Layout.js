@@ -5,10 +5,6 @@ const layout = ({children}) =>{
     return(
         <>
         <Head>
-        <link rel="stylesheet" type="text/css" href="myfolderTable/vendor/bootstrap/css/bootstrap.min.css"/>
-            <link rel="stylesheet" type="text/css" href="myfolderTable/vendor/perfect-scrollbar/perfect-scrollbar.css"/>
-            <link rel="stylesheet" type="text/css" href="myfolderTable/css/main.css"/>
-            
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
             <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"/>

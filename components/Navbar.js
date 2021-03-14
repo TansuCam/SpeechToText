@@ -46,7 +46,7 @@ const Navbar = () =>{
                         <em className="fas fa-user"></em> Profil </a>
                     <div className="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
                     <Link href="/myfolder"><a className="dropdown-item"><em className="fas fa-folder mr-2"></em> Dosyalarım</a></Link> 
-                        <button className="dropdown-item" 
+                        <button className="dropdown-item" style={{marginLeft:-14}}
                             onClick={()=>{
                                 cookie.remove('token')
                                 cookie.remove('user')

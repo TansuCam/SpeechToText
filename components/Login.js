@@ -45,18 +45,18 @@ const Login = () =>{
         <form onSubmit={(e)=>userLogin(e)}>
   
             <div className="form-outline mb-4">
+                <label className="form-label" for="form2Example1">E-posta Adresi</label>
                 <input type="email" id="form2Example1" className="form-control" 
                 value={email}
                 onChange={(e)=>setEmail(e.target.value)}/>
-                <label className="form-label" for="form2Example1">Email address</label>
             </div>
 
 
             <div className="form-outline mb-4">
+                <label className="form-label" for="form2Example2">Parola</label>
                 <input type="password" id="form2Example2" className="form-control" 
                 value={password}
                 onChange={(e)=>setPassword(e.target.value)} />
-                <label className="form-label" for="form2Example2">Password</label>
             </div>
 
 
@@ -70,17 +70,17 @@ const Login = () =>{
                         id="form2Example3"
                         checked
                         />
-                        <label className="form-check-label" for="form2Example3"> Remember me </label>
+                        <label className="form-check-label" for="form2Example3"> Beni Hatırla </label>
                     </div>
                 </div>
 
                 <div className="col">
-                    <a href="#!">Forgot password?</a>
+                    <a href="#!">Şifremi Unuttum?</a>
                 </div>
             </div>
 
             
-            <button type="submit" className="btn btn-primary btn-block mb-4">Sign in</button>
+            <button type="submit" className="btn btn-primary btn-block mb-4">Giriş</button>
 
             </form>
         </div>
