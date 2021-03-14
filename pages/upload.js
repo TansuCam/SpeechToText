@@ -15,7 +15,9 @@ const Upload = () => {
   
   export async function getServerSideProps(ctx){
     const {token} = parseCookies(ctx)
-    if(!token){
+    const cookie = parseCookies(ctx)
+    const user =  cookie.user ? JSON.parse(cookie.user) : ""
+    if(!token || user.role == 'admin' || user.role == '' ){
         const {res} = ctx
         res.writeHead(302,{Location:"/"})
         res.end()

@@ -10,6 +10,7 @@ const Navbar = () =>{
 
     const cookieuser = parseCookies()
     const user =  cookieuser.user ? JSON.parse(cookieuser.user) : ""
+    console.log(user)
 
     function isActive(route){
         if(route==router.pathname){
@@ -28,6 +29,9 @@ const Navbar = () =>{
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent-4">
             <ul className="navbar-nav ml-auto">
+                
+            {user.role != 'admin' &&
+            <>
                 <li className={isActive("/about")} className="nav-item mr-3" >
                 <Link href="/about"><a className="nav-link" >
                     <em className="fas fa-users"></em> Hakkımızda
@@ -38,14 +42,21 @@ const Navbar = () =>{
                <a className="nav-link">
                     <em className="fas fa-lira-sign"></em> Fiyatlar</a></Link>
                 </li>
-                {user ?
-                <>
-                    <li className="nav-item dropdown mr-3">
-                    <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+            </>
+            }
+            {user.role == 'admin' &&
+            <>
+                <span className={isActive("/admin/settings")} className="nav-item mr-3" >
+                <Link href="/admin/settings"><a className="nav-link" >
+                    <em className="far fa-edit"></em> Düzenle
+                    <span className="sr-only">(current)</span>
+                </a></Link>
+                </span>
+                <li className="nav-item dropdown mr-3">
+                    <span style={{cursor:'pointer'}} className="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        <em className="fas fa-user"></em> Profil </a>
+                        <em className="fas fa-user-cog"></em> Yönetici </span>
                     <div className="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-                    <Link href="/myfolder"><a className="dropdown-item"><em className="fas fa-folder mr-2"></em> Dosyalarım</a></Link> 
                         <button className="dropdown-item" style={{marginLeft:-14}}
                             onClick={()=>{
                                 cookie.remove('token')
@@ -55,11 +66,27 @@ const Navbar = () =>{
                         ><em className="fas fa-sign-out-alt mr-2"></em> Çıkış</button>
                     </div>
                     </li>
-                </>
-                :
-                <>
-                </>
-                }
+            </>
+            }
+            {user.role == 'user' &&
+            <>
+                <li className="nav-item dropdown mr-3">
+                <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <em className="fas fa-user"></em> Profil </a>
+                <div className="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+                <Link href="/myfolder"><a className="dropdown-item"><em className="fas fa-folder mr-2"></em> Dosyalarım</a></Link> 
+                    <button className="dropdown-item" style={{marginLeft:-14}}
+                        onClick={()=>{
+                            cookie.remove('token')
+                            cookie.remove('user')
+                            router.push('/')
+                        }}
+                    ><em className="fas fa-sign-out-alt mr-2"></em> Çıkış</button>
+                </div>
+                </li>
+            </>
+            }
     </ul>
   </div>
 </nav>

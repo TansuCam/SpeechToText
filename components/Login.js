@@ -5,9 +5,17 @@ import {useRouter} from 'next/router'
 import {parseCookies} from 'nookies'
 
 const Login = () =>{
+    const router  = useRouter()
+    const cookieuser = parseCookies()
+    const user =  cookieuser.user ? JSON.parse(cookieuser.user) : ""
+    if(user.role == 'user'){
+        router.push('/upload')
+    }else if(user.role == 'admin'){
+        router.push('/admin/adminpanel')
+    }
+
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const router  = useRouter()
     const userLogin = async (e)=>{
         e.preventDefault()
         const res =  await fetch(`${baseUrl}/api/login`,{
