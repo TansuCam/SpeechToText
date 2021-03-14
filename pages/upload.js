@@ -1,6 +1,7 @@
 import React from 'react'
 import Uploads from '../components/Upload'
 import Card from '../components/Card'
+import {parseCookies} from 'nookies'
 
 const Upload = () => {
     return <div className="container" style={{marginTop:100}}>
@@ -12,4 +13,17 @@ const Upload = () => {
     </div>
   }
   
+  export async function getServerSideProps(ctx){
+    const {token} = parseCookies(ctx)
+    if(!token){
+        const {res} = ctx
+        res.writeHead(302,{Location:"/"})
+        res.end()
+    }
+  
+    return {
+        props:{}
+    }
+  }
+
   export default Upload

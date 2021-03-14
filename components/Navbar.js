@@ -1,10 +1,16 @@
 import Link from 'next/link'
 import React from 'react'
 import {useRouter} from 'next/router'
+import {parseCookies} from 'nookies'
+import cookie from 'js-cookie'
 
 const Navbar = () =>{
 
     const router = useRouter()
+
+    const cookieuser = parseCookies()
+    const user =  cookieuser.user ? JSON.parse(cookieuser.user) : ""
+
     function isActive(route){
         if(route==router.pathname){
             return "active"
@@ -23,24 +29,37 @@ const Navbar = () =>{
             <div className="collapse navbar-collapse" id="navbarSupportedContent-4">
             <ul className="navbar-nav ml-auto">
                 <li className={isActive("/about")} className="nav-item mr-3" >
-             <Link href="/about"><a className="nav-link" >
+                <Link href="/about"><a className="nav-link" >
                     <em className="fas fa-users"></em> Hakkımızda
                     <span className="sr-only">(current)</span>
-                </a></Link> 
+                </a></Link>
                 </li>
                 <li className={isActive("/price")}  className="nav-item mr-3"><Link href="/price">
                <a className="nav-link">
                     <em className="fas fa-lira-sign"></em> Fiyatlar</a></Link>
                 </li>
-                <li className="nav-item dropdown mr-3">
-                <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <em className="fas fa-user"></em> Profil </a>
-                <div className="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-                  <Link href="/myfolder"><a className="dropdown-item"><em className="fas fa-folder mr-2"></em> Dosyalarım</a></Link> 
-                    <a className="dropdown-item" href="#"><em className="fas fa-sign-out-alt mr-2"></em> Çıkış</a>
-                </div>
-      </li>
+                {user ?
+                <>
+                    <li className="nav-item dropdown mr-3">
+                    <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <em className="fas fa-user"></em> Profil </a>
+                    <div className="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+                    <Link href="/myfolder"><a className="dropdown-item"><em className="fas fa-folder mr-2"></em> Dosyalarım</a></Link> 
+                        <button className="dropdown-item" 
+                            onClick={()=>{
+                                cookie.remove('token')
+                                cookie.remove('user')
+                                router.push('/')
+                          }}
+                        ><em className="fas fa-sign-out-alt mr-2"></em> Çıkış</button>
+                    </div>
+                    </li>
+                </>
+                :
+                <>
+                </>
+                }
     </ul>
   </div>
 </nav>

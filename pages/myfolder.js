@@ -1,4 +1,4 @@
-
+import {parseCookies} from 'nookies'
 
 const MyFolder = () => {
     return (
@@ -77,5 +77,17 @@ const MyFolder = () => {
     )
   }
 
+  export async function getServerSideProps(ctx){
+    const {token} = parseCookies(ctx)
+    if(!token){
+        const {res} = ctx
+        res.writeHead(302,{Location:"/"})
+        res.end()
+    }
   
+    return {
+        props:{}
+    }
+  }
+
   export default MyFolder
