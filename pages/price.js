@@ -1,10 +1,12 @@
 import React from 'react'
 import {parseCookies} from 'nookies'
+import PriceCards from '../components/Price'
 
 const Price = () => {
-    return <div>
-      price
-    </div>
+    return (
+       <PriceCards/>
+    
+    )
   }
   export async function getServerSideProps(ctx){
     const cookie = parseCookies(ctx)

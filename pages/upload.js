@@ -4,13 +4,13 @@ import Card from '../components/Card'
 import {parseCookies} from 'nookies'
 
 const Upload = () => {
-    return <div className="container" style={{marginTop:100}}>
+    return (<div className="container" style={{marginTop:100,marginBottom:'10%'}}>
       <div className="row">
       <div className="col-lg-1"></div>
       <div  className="col-lg-6"><Uploads/></div>
       <div  className="col-lg-5"><Card/></div>
     </div>
-    </div>
+    </div>)
   }
   
   export async function getServerSideProps(ctx){

@@ -1,10 +1,10 @@
 const Card = () => {
     return(
         <div>
-                    <div class="jumbotron jumbotron-fluid">
-                        <div class="container" style={{textAlign: "center"}}>
-                            <h2 class="display-4"><em class="fas fa-microphone-alt mr-2" style={{fontSize: '1.8em'}}></em></h2>
-                            <p class="lead">Daha Doğru Sonuçlar İçin</p>
+                    <div className="jumbotron jumbotron-fluid mt-1">
+                        <div className="container" style={{textAlign: "center"}}>
+                            <h2 className="display-4"><em className="fas fa-microphone-alt mr-2" style={{fontSize: '1.8em'}}></em></h2>
+                            <p className="lead">Daha Doğru Sonuçlar İçin</p>
                             <ul style={{textAlign: 'left'}}>
                                 <li>Gürültüsüz ses dosyaları kullanın</li>
                                 <li>Aynı anda konuşulmayan dosyalar kullanın.</li>

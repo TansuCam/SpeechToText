@@ -3,6 +3,7 @@ import baseUrl from '../helpers/baseUrl'
 import cookie from 'js-cookie'
 import {useRouter} from 'next/router'
 import {parseCookies} from 'nookies'
+import Link from 'next/link'
 
 const Login = () =>{
     const router  = useRouter()
@@ -83,7 +84,7 @@ const Login = () =>{
                 </div>
 
                 <div className="col">
-                    <a href="#!">Şifremi Unuttum?</a>
+                    <Link href="/forgotPass"><a>Şifremi Unuttum?</a></Link>
                 </div>
             </div>
 

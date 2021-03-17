@@ -4,9 +4,9 @@ import {parseCookies} from 'nookies'
 const Index = () => {
     return (  
 
-    <div className="container mt-5">
+    <div className="container mt-5" style={{marginBottom:'27%'}}>
       
-     <table class="table align-middle">
+     <table className="table align-middle">
   <thead>
     <tr>
       <th scope="col">id</th>
@@ -29,8 +29,8 @@ const Index = () => {
       <td>Amet</td>
       <td>Amet</td>
       <td>
-        <button type="button" class="btn btn-danger btn-sm px-3">
-          <i class="fas fa-times"></i>
+        <button type="button" className="btn btn-danger btn-sm px-3">
+          <i className="fas fa-times"></i>
         </button>
       </td>
     </tr>

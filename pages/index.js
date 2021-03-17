@@ -23,8 +23,6 @@ const HomePage = () => {
               <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"><Register/></div>
             </div>
 
-             <Link href="/upload"><button className="mt-5 bg-white">Yükleme Sayfasına Git</button></Link>  
-
           </div>
           <div className="img">
             <Image
