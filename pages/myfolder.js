@@ -3,12 +3,12 @@ import {parseCookies} from 'nookies'
 const MyFolder = () => {
     return (
     
-      <div class="container limiter mt-5">
-            <blockquote class="blockquote bq-primary" style={{marginLeft: 11}}>
-                <h3 class="bq-title">Dosyalarınız Bizimle Güvende <i class="fas fa-angle-double-right"></i></h3>
+      <div className="container limiter mt-5" style={{marginBottom:'23%'}}>
+            <blockquote className="blockquote bq-primary" style={{marginLeft: 11}}>
+                <h3 className="bq-title">Dosyalarınız Bizimle Güvende <i className="fas fa-angle-double-right"></i></h3>
               </blockquote>
             <div>
-             <table class="table align-middle">
+             <table className="table align-middle">
                 <thead>
                     <tr>
                     <th scope="col">#</th>
@@ -26,23 +26,23 @@ const MyFolder = () => {
                     <td>Amet</td>
                     <td>Amet</td>
                     <td>
-                        <div class="btn-group" style={{marginTop: -10}}>
+                        <div className="btn-group" style={{marginTop: -10}}>
                             <button
                                 type="button"
-                                class="btn btn-sm btn-danger dropdown-toggle"
+                                className="btn btn-sm btn-danger dropdown-toggle"
                                 data-mdb-toggle="dropdown"
                                 aria-expanded="false"
                             >
                                 Action
                             </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <ul className="dropdown-menu">
+                                <li><a className="dropdown-item" href="#">Action</a></li>
+                                <li><a className="dropdown-item" href="#">Another action</a></li>
+                                <li><a className="dropdown-item" href="#">Something else here</a></li>
                                 <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                                 </li>
-                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                <li><a className="dropdown-item" href="#">Separated link</a></li>
                             </ul>
                             </div>
                     </td>

@@ -3,7 +3,7 @@ import Results from '../components/Result'
 
 
 const Result = () => {
-    return <div>
+    return <div style={{marginBottom:'18%'}}>
         <Results/>
         
     </div>

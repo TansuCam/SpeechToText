@@ -21,7 +21,7 @@ const Navbar = () =>{
 
     return(
                
-        <nav className="mb-1 navbar navbar-expand-lg navbar-dark blue-gradient" style={{height:80}}>
+        <nav className="mb-1 navbar navbar-expand-lg navbar-dark " style={{height:80, backgroundImage:'linear-gradient(114deg, #008bd1, #1149b0)'}}>
             <Link href="/"><a className="navbar-brand"><em className="fas fa-microphone-alt mr-2" style={{fontSize: "1.8em"}}></em> Speech To Text</a></Link> 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
                 aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,18 +52,18 @@ const Navbar = () =>{
                     <span className="sr-only">(current)</span>
                 </a></Link>
                 </span>
-                <li className="nav-item dropdown mr-3">
+                <li className="nav-item dropdown">
                     <span style={{cursor:'pointer'}} className="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         <em className="fas fa-user-cog"></em> Yönetici </span>
                     <div className="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-                        <button className="dropdown-item" style={{marginLeft:-14}}
+                        <button className="dropdown-item" 
                             onClick={()=>{
                                 cookie.remove('token')
                                 cookie.remove('user')
                                 router.push('/')
                           }}
-                        ><em className="fas fa-sign-out-alt mr-2"></em> Çıkış</button>
+                        ><em className="fas fa-sign-out-alt"></em> Çıkış</button>
                     </div>
                     </li>
             </>
