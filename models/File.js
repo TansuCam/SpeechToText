@@ -14,11 +14,11 @@ const fileSchema = new mongoose.Schema({
         default: "İşleniyor..."
     },
     user: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
 }, {
     timestamps: true
 })
 
-module.exports = mongoose.model('File', fileSchema);
+module.exports = mongoose.models.File ||  mongoose.model('File', fileSchema);

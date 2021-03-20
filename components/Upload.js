@@ -1,22 +1,31 @@
 import Link from 'next/link'
+import baseUrl from '../helpers/baseUrl'
 
-const Upload = () =>{
+const Upload = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const data = new FormData(e.target);
+        fetch(`${baseUrl}/api/upload`,{
+            method: 'POST',
+            body: data,
+        })
+    }
     return(
 
                
                 <div>
                     <ul className="nav nav-tabs" id="myTab" role="tablist">
                         <li className="nav-item">
-                          <a className="nav-link active" id="link-tab" data-toggle="tab" href="#link" role="tab" aria-controls="link"
+                          <a className="nav-link disabled" id="link-tab" data-toggle="tab" href="#link" role="tab" aria-controls="link"
                             aria-selected="true">Youtube Bağlantısı</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" id="upload-tab" data-toggle="tab" href="#upload" role="tab" aria-controls="upload"
+                          <a className="nav-link active" id="upload-tab" data-toggle="tab" href="#upload" role="tab" aria-controls="upload"
                             aria-selected="false">Dosya Yükle</a>
                         </li>
                       </ul>
                       <div className="tab-content" id="myTabContent">
-                        <div className="tab-pane fade show active" id="link" role="tabpanel" aria-labelledby="link-tab">
+                        <div className="tab-pane fade" id="link" role="tabpanel" aria-labelledby="link-tab">
                             <form className="border border-light p-5">
 
                                 <div className="text-center">
@@ -29,8 +38,8 @@ const Upload = () =>{
                               <Link href="/result"><button className="btn btn-info btn-block" type="submit"><a style={{textDecoration: "none", color:"white"}}>Gönder</a></button></Link>  
                             </form>
                         </div>
-                        <div className="tab-pane fade" id="upload" role="tabpanel" aria-labelledby="upload-tab">
-                            <form className="border border-light p-5">
+                        <div className="tab-pane fade show active" id="upload" role="tabpanel" aria-labelledby="upload-tab">
+                            <form className="border border-light p-5" onSubmit={(e) => handleSubmit(e)}>
 
                                 <div className="text-center">
                                     <p className="h4 mb-4">Dosya Yükle</p>
@@ -42,12 +51,12 @@ const Upload = () =>{
                                         <span className="input-group-text">Yükle</span>
                                     </div>
                                     <div className="custom-file">
-                                        <input type="file" className="custom-file-input" id="fileInput" aria-describedby="fileInput"/>
+                                        <input type="file" className="custom-file-input" id="fileInput" name="sound" aria-describedby="fileInput"/>
                                         <label className="custom-file-label" for="fileInput">Dosya Adı</label>
                                     </div>
                                 </div>
                             
-                               <Link href="/result"><a  className="btn btn-info btn-block"  style={{textDecoration: "none", color:"white"}}>Gönder</a></Link> 
+                                <button type="submit" className="btn btn-primary btn-block mb-4">Gönder</button>
                             </form>
                         </div>
                       </div>
