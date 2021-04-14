@@ -15,7 +15,7 @@ const Upload = () => {
                
                 <div>
                     <ul className="nav nav-tabs" id="myTab" role="tablist">
-                        <li className="nav-item">
+                        <li className="nav-item" style={{display: "none"}}>
                           <a className="nav-link disabled" id="link-tab" data-toggle="tab" href="#link" role="tab" aria-controls="link"
                             aria-selected="true">Youtube Bağlantısı</a>
                         </li>

@@ -10,7 +10,6 @@ const Navbar = () =>{
 
     const cookieuser = parseCookies()
     const user =  cookieuser.user ? JSON.parse(cookieuser.user) : ""
-    console.log(user)
 
     function isActive(route){
         if(route==router.pathname){

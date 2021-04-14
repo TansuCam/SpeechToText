@@ -1,11 +1,15 @@
 import {parseCookies} from 'nookies'
-/* dosya adı süre tarih durum */
-const MyFolder = () => {
+import jwt from "jsonwebtoken"
+import File from "../models/File"
+import initDB from '../helpers/initDB'
+
+
+const MyFolder = ({ files }) => {
     return (
-    
       <div className="container limiter mt-5" style={{marginBottom:'23%'}}>
             <blockquote className="blockquote bq-primary" style={{marginLeft: 11}}>
-                <h3 className="bq-title">Dosyalarınız Bizimle Güvende <i className="fas fa-angle-double-right"></i></h3>
+    
+                <h3 className="bq-title">Dosyalarınız Bizimle Güvende  <i className="fas fa-angle-double-right"></i></h3>
               </blockquote>
             <div>
              <table className="table align-middle">
@@ -13,9 +17,8 @@ const MyFolder = () => {
                     <tr>
                     <th scope="col">#</th>
                     <th scope="col">Dosya Adı</th>
-                    <th scope="col">Süre</th>
                     <th scope="col">Tarih</th>
-                    <th scope="col">Durum</th>
+                    <th scope="col">Sonuç</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,8 +50,8 @@ const MyFolder = () => {
                             </div>
                     </td>
                     </tr>
-
                     
+                    {files}
                     
                 </tbody>
                 </table>
@@ -60,6 +63,7 @@ const MyFolder = () => {
   }
 
   export async function getServerSideProps(ctx){
+    initDB()
     const {token} = parseCookies(ctx)
     const cookie = parseCookies(ctx)
     const user =  cookie.user ? JSON.parse(cookie.user) : ""
@@ -67,10 +71,13 @@ const MyFolder = () => {
         const {res} = ctx
         res.writeHead(302,{Location:"/"})
         res.end()
-    }
-  
-    return {
-        props:{}
+    } else if (token) {
+        const user =  jwt.decode(token).userId;
+        const data = await File.find({user}, '-_id name createdAt transcript').exec();
+        const files = JSON.parse(JSON.stringify(data));
+        return {
+            props:{ files }
+        }
     }
   }
 

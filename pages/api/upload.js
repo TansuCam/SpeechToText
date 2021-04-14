@@ -4,6 +4,7 @@ import nextConnect from "next-connect"
 import jwt from "jsonwebtoken"
 import path from "path"
 import initDB from '../../helpers/initDB'
+import googleSTT from '../../helpers/googleSTT'
 
 initDB()
 
@@ -54,6 +55,19 @@ apiRoute.post((req, res) => {
             if (err) console.log(err);
 
             console.log(newFile);
+            /*newFile
+            {
+                transcript: 'İşleniyor...',
+                _id: 60762efc8112771fc893aadb,
+                name: 'oie_Frt4qvgtkrrB.png',
+                path: './uploads\\user-1618358012204.png',
+                user: 604f995a5e64373ee8ec19e9,
+                createdAt: 2021-04-13T23:53:32.206Z,
+                updatedAt: 2021-04-13T23:53:32.206Z,
+                __v: 0
+                }
+            */
+            googleSTT(res, newFile);
         });
     });
 });
