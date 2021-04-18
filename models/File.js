@@ -13,6 +13,7 @@ const fileSchema = new mongoose.Schema({
         type: String,
         default: "İşleniyor..."
     },
+    hidden: Boolean,
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'

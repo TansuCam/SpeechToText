@@ -65,7 +65,7 @@ export async function getServerSideProps(ctx) {
         res.end()
     } else if (token) {
         const usr = jwt.decode(token).userId;
-        const data = await File.find({ user: usr }, '_id name createdAt transcript').exec();
+        const data = await File.find({ user: usr, hidden: {$ne: true} }, '_id name createdAt transcript', { sort: { createdAt: -1 } }).exec();
         const files = JSON.parse(JSON.stringify(data));
         return {
             props: {

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Router from 'next/router';
 import baseUrl from '../helpers/baseUrl'
 
 const Upload = () => {
@@ -8,7 +9,7 @@ const Upload = () => {
         fetch(`${baseUrl}/api/upload`,{
             method: 'POST',
             body: data,
-        })
+        }).then(Router.push('/myfolder'));
     }
     return(
 

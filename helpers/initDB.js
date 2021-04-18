@@ -6,7 +6,7 @@
           console.log("ALREADY CONNECTED")
           return
       }
-      mongoose.connect('mongodb+srv://speechtotext:RpRdgc8EfRX5Y7bY@cluster0.adaqf.mongodb.net/speechtotext?retryWrites=true&w=majority', {useNewUrlParser: true,useUnifiedTopology:true});
+      mongoose.connect('mongodb+srv://speechtotext:RpRdgc8EfRX5Y7bY@cluster0.adaqf.mongodb.net/speechtotext?retryWrites=true&w=majority', {useNewUrlParser: true,useUnifiedTopology:true, useFindAndModify: false});
       mongoose.connection.once('open', function(){
         console.log('Conection has been made!');
       }).on('error', function(error){
