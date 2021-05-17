@@ -5,6 +5,7 @@ import jwt from "jsonwebtoken"
 import path from "path"
 import initDB from '../../helpers/initDB'
 import googleSTT from '../../helpers/googleSTT'
+import mp3dur from "mp3-duration"
 
 initDB()
 
@@ -46,15 +47,20 @@ apiRoute.post((req, res) => {
         const user =  jwt.decode(token).userId;
         const path = req.file.destination + '\\' +  req.file.filename;
         const name = req.file.originalname;
-
-        const newFile = new File({
-            name,
-            path,
-            user
-        }).save(function(err, newFile) {
-            if (err) console.log(err);
-            googleSTT(res, newFile);
-        });
+        mp3dur(req.file.path, (err, dur) => {
+            if (err) console.log("error: ", err);
+            const duration = Math.floor(dur);
+            const newFile = new File({
+                name,
+                path,
+                user,
+                duration
+            }).save(function(err, newFile) {
+                if (err) console.log(err);
+                // Dosyalar ekranından yapılacak
+                //googleSTT(res, newFile);
+            });
+        })
     });
 });
 
