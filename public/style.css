@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+}
+.index{
+    margin-left: 70px;
+    margin-bottom: 10%;
+    display: grid;
+    grid-template-columns: 35% 40%;
+    grid-gap:5%;
+    
+}
+.img{
+    margin-top: 0px;
+}
+.indexcard{
+    margin-top: -50px;
+    margin-left: 20px;
+}
+@media screen and (max-width:1000px){
+    .index{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .img{
+        display: none;
+    }
+}
+@media screen and (max-width:700px){
+    .index{
+        margin-left: 10px;
+        margin-right: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

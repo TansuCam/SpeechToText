@@ -1,0 +1,62 @@
+{
+  "name": "speechtt",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@google-cloud/speech": "^4.4.0",
+    "@google-cloud/storage": "^5.8.3",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.6.0",
+    "dotenv": "^8.2.0",
+    "js-cookie": "^2.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "latest-version": "^5.1.0",
+    "lodash": "^4.17.21",
+    "materialize-css": "^1.0.0",
+    "mongoose": "^5.12.0",
+    "mp3-duration": "^1.1.0",
+    "multer": "^1.4.2",
+    "next": "^10.2.2",
+    "next-connect": "^0.10.1",
+    "nookies": "^2.5.2",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.6.0",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.2",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
