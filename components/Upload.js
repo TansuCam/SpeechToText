@@ -6,10 +6,10 @@ const Upload = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const data = new FormData(e.target);
-        fetch(`${baseUrl}/api/upload`,{
+       /* fetch(`${baseUrl}/api/upload`,{
             method: 'POST',
             body: data,
-        }).then(Router.push('/myfolder'));
+        }).then(Router.push('/myfolder'));*/
     }
     return(
 
@@ -57,10 +57,52 @@ const Upload = () => {
                                     </div>
                                 </div>
                             
-                                <button type="submit" className="btn btn-primary btn-block mb-4">Gönder</button>
+                                <button type="submit" className="btn btn-primary btn-block mb-4" data-toggle="modal" data-target="#exampleModalCenter">Transkript Al</button>
                             </form>
                         </div>
                       </div>
+
+                    {/*Modal*/}
+                    <div class="modal fade"  id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"  role="document">
+                        <div class="modal-content" style={{background: 'linear-gradient(114deg, #008bd1, #1149b0)'}}>
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                        <div>
+                                <div class="row">
+                                <div class="col-md-7 ">
+                                    <h5 className="white-text"><strong>Gelişmiş Seçenek</strong></h5>
+                                    <div className="ml-3">
+                                    <p><i class="fas fa-check-circle mr-2"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                    <p><i class="fas fa-check-circle mr-2"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-5"><Link href="/myfolder"><button className="btn btn-secondary mt-5 "  >40 Token Öde</button></Link></div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div>
+                                <div class="row">
+                                <div class="col-md-7 ">
+                                    <h5 className="white-text"><strong>Standart Seçenek</strong></h5>
+                                    <div className="ml-3">
+                                    <p><i class="fas fa-check-circle mr-2"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                    <p><i class="fas fa-check-circle mr-2"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-5"><button className="btn btn-warning mt-5">40 Token Öde</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    {/*Modal*/}
                 </div>
              
 
