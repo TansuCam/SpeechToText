@@ -1,44 +1,13 @@
 import React from 'react'
+import DataList from '../../components/DataList'
 import {parseCookies} from 'nookies'
 
 const Index = () => {
-    return (  
+    return ( 
+      <div>
+            <DataList/>
+        </div> 
 
-    <div className="container mt-5" style={{marginBottom:'27%'}}>
-      
-     <table className="table align-middle">
-  <thead>
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">Adı</th>
-      <th scope="col">Soyadı</th>
-      <th scope="col">Email</th>
-      <th scope="col">Kullanım</th>
-      <th scope="col">Kalan</th>
-      <th scope="col">Ücret</th>
-      <th scope="col">İşlem</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Sit</td>
-      <td>Amet</td>
-      <td>Amet</td>
-      <td>Amet</td>
-      <td>Amet</td>
-      <td>Amet</td>
-      <td>
-        <button type="button" className="btn btn-danger btn-sm px-3">
-          <i className="fas fa-times"></i>
-        </button>
-      </td>
-    </tr>
-    
-  </tbody>
-</table>
-
-    </div>
     )
   }
   
@@ -51,11 +20,18 @@ const Index = () => {
         res.writeHead(302,{Location:"/"})
         res.end()
     }
-  
+
+    const res = await fetch('http://localhost:3000/api/users')
+    const data = await res.json()
+
   
     return {
-        props:{}
+        props:{
+          files: data
+        }
     }
   }
+
+  
 
   export default Index

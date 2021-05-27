@@ -11,19 +11,17 @@ const Price = () =>{
                                 <div className="card text-center">
                                     <header className="card-header border-0 text-white" style={{backgroundImage:'linear-gradient(-45deg, #4d93d5, #1a466f)'}}>
                                         <div className="pricing-value border-white p-2">
-                                        <span><h3>Free</h3></span>
-                                                 <h1 className="font-weight-bold font-medium">₺0</h1>
+                                        <h1 className="font-weight-bold">100 Token</h1>
+                                        <h3 className=" font-medium">₺10</h3>
                                            
                                         </div>
                                     </header>
                                     <div className="card-body p-4">
                                         <ul className="list-group mb-4 p-2">
-                                            <li className="list-group-item rounded-pill mb-2" >Community support</li>
-                                            <li className="list-group-item rounded-pill mb-2">15 GB SSD storage</li>
-                                            <li className="list-group-item rounded-pill" >One-click staging site</li>
+                                        <h5 className="p-4">Sistemde kullanabilmeniz için <b>100 Token</b> hesabınıza tanımlanır.</h5>
                                         </ul>
                                         <button type="button" className="btn btn-block font-weight-bold animate-up-2 text-white rounded-pill"
-                                            tabindex="0" style={{backgroundImage:'linear-gradient(-45deg, #4d93d5, #1a466f)'}}><span className="fas fa-cart-plus mr-3"></span>Add to Cart</button>
+                                            tabindex="0" style={{backgroundImage:'linear-gradient(-45deg, #4d93d5, #1a466f)'}}><span className="fas fa-coins fa-lg  mr-3"></span>Token Al</button>
                                     </div>
                                 </div>
                             </div>
@@ -34,19 +32,17 @@ const Price = () =>{
                                 <div className="card text-center">
                                     <header className="card-header border-0 text-white" style={{backgroundImage:'linear-gradient(-45deg, #85468c, #241326)'}}>
                                        
-                                        <div className="pricing-value border-white p-2">
-                                        <h3>Premium</h3>
-                                        <h1 className="font-weight-bold font-medium">₺70</h1>
+                                        <div className="pricing-value border-white p-2 ">
+                                        <h1 className="font-weight-bold">1000 Token</h1>
+                                        <h3 className=" font-medium">₺85</h3>
                                         </div>
                                     </header>
                                     <div className="card-body p-4">
                                         <ul className="list-group mb-4 p-2">
-                                            <li className="list-group-item rounded-pill mb-2" >Community support</li>
-                                            <li className="list-group-item rounded-pill mb-2">15 GB SSD storage</li>
-                                            <li className="list-group-item rounded-pill" >One-click staging site</li>
+                                        <h5 className="p-4">Sistemde kullanabilmeniz için <b>1000 Token</b> hesabınıza tanımlanır.</h5>
                                         </ul>
                                         <button type="button" className="btn btn-block font-weight-bold animate-up-2 text-white rounded-pill"
-                                            tabindex="0" style={{backgroundImage:'linear-gradient(-45deg, #85468c, #241326)'}}><span className="fas fa-cart-plus mr-3"></span>Add to Cart</button>
+                                            tabindex="0" style={{backgroundImage:'linear-gradient(-45deg, #85468c, #241326)'}}><span className="fas fa-coins fa-lg mr-3"></span>Token Al</button>
                                     </div>
                                 </div>
                             </div>
@@ -58,18 +54,14 @@ const Price = () =>{
                                     <header className="card-header border-0 text-white" style={{backgroundImage:'linear-gradient(-45deg, #4d93d5, #1a466f)'}}>
                                        
                                         <div className="pricing-value border-white p-2">
-                                        <h3>Standart</h3>
-                                        <h1 className="font-weight-bold font-medium">₺30</h1>
+                                        <h1 className="font-weight-bold">500 Token</h1>
+                                        <h3 className=" font-medium">₺45</h3>
                                         </div>
                                     </header>
                                     <div className="card-body p-4">
-                                        <ul className="list-group mb-4 p-2">
-                                            <li className="list-group-item rounded-pill mb-2" >Community support</li>
-                                            <li className="list-group-item rounded-pill mb-2">15 GB SSD storage</li>
-                                            <li className="list-group-item rounded-pill" >One-click staging site</li>
-                                        </ul>
+                                       <h5 className="p-4">Sistemde kullanabilmeniz için <b>500 Token</b> hesabınıza tanımlanır.</h5>
                                         <button type="button" className="btn btn-block font-weight-bold animate-up-2 text-white rounded-pill"
-                                            tabindex="0" style={{backgroundImage:'linear-gradient(-45deg, #4d93d5, #1a466f)'}}><span className="fas fa-cart-plus mr-3"></span>Add to Cart</button>
+                                            tabindex="0" style={{backgroundImage:'linear-gradient(-45deg, #4d93d5, #1a466f)'}}><span className="fas fa-coins fa-lg mr-3"></span>Token Al</button>
                                     </div>
                                 </div>
                             </div>
