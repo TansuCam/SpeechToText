@@ -3,8 +3,13 @@ import Link from 'next/link'
 import Login from '../components/Login'
 import Register from '../components/Register'
 import Image from 'next/image'
+import File from '../models/File'
 
 const HomePage = () => {
+  File.find().populate('user').exec((err, files) => {
+    if(err) console.log(err);
+    console.log(files);
+  })
     return(
       <div className="index mt-5">
           <div className="container pt-5  ">

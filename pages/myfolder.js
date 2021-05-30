@@ -19,11 +19,7 @@ const delFile = (_id) => {
 
 const MyFolder = ({ files, user }) => {
     return (
-<<<<<<< HEAD
-        <div className="container limiter mt-5" style={{ marginBottom: '23%' }}>
-=======
         <div className="container limiter mt-5" style={{ marginBottom: '23%' }} >
->>>>>>> 166e3eca1d4cfd426ceb1a863c64881280a04e28
             <blockquote className="blockquote bq-primary" style={{ marginLeft: 11 }}>
 
                 <h3 className="bq-title">Dosyalarınız Bizimle Güvende {user.name} <i className="fas fa-angle-double-right"></i></h3>
