@@ -9,10 +9,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
     "bcryptjs": "^2.4.3",
-<<<<<<< HEAD
-=======
     "bootstrap": "^4.6.0",
->>>>>>> 166e3eca1d4cfd426ceb1a863c64881280a04e28
     "dotenv": "^8.2.0",
     "js-cookie": "^2.2.1",
     "jsonwebtoken": "^8.5.1",
@@ -22,18 +19,11 @@
     "mongoose": "^5.12.0",
     "mp3-duration": "^1.1.0",
     "multer": "^1.4.2",
-<<<<<<< HEAD
-    "next": "^10.0.8",
-    "next-connect": "^0.10.1",
-    "nookies": "^2.5.2",
-    "react": "^17.0.1",
-=======
     "next": "^10.2.2",
     "next-connect": "^0.10.1",
     "nookies": "^2.5.2",
     "react": "^17.0.1",
     "react-bootstrap": "^1.6.0",
->>>>>>> 166e3eca1d4cfd426ceb1a863c64881280a04e28
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
     "web-vitals": "^1.1.1"
