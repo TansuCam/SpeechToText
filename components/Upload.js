@@ -6,10 +6,10 @@ const Upload = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const data = new FormData(e.target);
-       /* fetch(`${baseUrl}/api/upload`,{
+        fetch(`${baseUrl}/api/upload`,{
             method: 'POST',
             body: data,
-        }).then(Router.push('/myfolder'));*/
+        }).then(Router.push('/myfolder'));
     }
     return(
 
@@ -57,12 +57,12 @@ const Upload = () => {
                                     </div>
                                 </div>
                             
-                                <button type="submit" className="btn btn-primary btn-block mb-4" data-toggle="modal" data-target="#exampleModalCenter">Transkript Al</button>
+                                <button type="submit" className="btn btn-primary btn-block mb-4">Gönder</button>
                             </form>
                         </div>
                       </div>
 
-                    {/*Modal*/}
+                    {/*Modal
                     <div class="modal fade"  id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered"  role="document">
                         <div class="modal-content" style={{background: 'linear-gradient(114deg, #008bd1, #1149b0)'}}>

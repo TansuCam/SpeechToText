@@ -20,8 +20,8 @@ export default async (req,res)=>{
             const token =  jwt.sign({userId:user._id},""+process.env.JWT_SECRET,{
                  expiresIn:"24h"
              })
-             const {name,role,email} = user
-             res.status(201).json({token,user:{name,role,email}})
+             const {name,role,email,_id} = user
+             res.status(201).json({token,user:{name,role,email,_id}})
          }else{
             return res.status(401).json({error:"Email ya da şifre eşleşmiyor."})
          }

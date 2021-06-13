@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema({
         required:true,
         default:"user",
         enum:["user", "admin","root"]
+    },
+    token: {
+        type: Number,
+        default: 0
     }
     },{
         timestamps:true

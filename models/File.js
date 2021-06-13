@@ -11,7 +11,7 @@ const fileSchema = new mongoose.Schema({
     },
     transcript: {
         type: String,
-        default: "İşleniyor..."
+        default: "Yüklendi."
     },
     hidden: Boolean,
     user: {
