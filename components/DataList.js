@@ -14,7 +14,7 @@ function DataList(){
         {dataField: 'user.name', text: 'Kullanıcı Ad', filter:textFilter()},
         {dataField: 'user.surname', text: 'Soyad', filter:textFilter()},
         {dataField: 'user.email', text: 'E-Posta', filter:textFilter()},
-        {dataField: 'token', text: 'Kalan', sort:true},
+        {dataField: 'user.token', text: 'Kalan', sort:true},
         {dataField: 'updatedAt', text: 'Oluşturulma Tarihi'}
 
     ];
